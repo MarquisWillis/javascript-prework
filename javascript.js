@@ -1,20 +1,30 @@
-document.getElementById("button1").addEventListener("click", function(){
-  document.getElementById("box").style.height = "250px";
+// declaring variable box: calling HTML box to be altered by buttons
+var phaseBox = document.getElementById("box");
+
+// declaring variables button(1-4): calling HTML buttons to alter box
+var button1 = document.getElementById("button1");
+var button2 = document.getElementById("button2");
+var button3 = document.getElementById("button3");
+var button4 = document.getElementById("button4");
+
+// telling button1 that when clicked upon, tell the box to increase height to 250px 
+button1.addEventListener("click", function(){
+  phaseBox.style.height = "250px";
 });
 
-document.getElementById("button2").addEventListener("click", function(){
-  document.getElementById("box").style.backgroundColor = "blue";
+// telling button2 that when clicked upon, tell box to restyle background color to blue
+button2.addEventListener("click", function(){
+  phaseBox.style.backgroundColor = "blue";
 });
 
-var fadeButton = document.getElementById("button3");
-var fadeBox = document.getElementById("box");
-
-fadeButton.onclick = function () {
-  fadeBox.style.opacity = 0.3;
-  console.log("click");
+// telling button3 that when clicked upon, tell box to resytle opacity for fade effect
+button3.onclick = function () {
+  phaseBox.style.opacity = 0.3;
 }
 
-document.getElementById("button4").addEventListener("click", function(){
-  document.getElementById("box").style.height = "150px";
-  document.getElementById("box").style.color = "orange";
+// telling button4 that when clicked upon, tell box to reset to default parameters 
+button4.addEventListener("click", function(){
+  phaseBox.style.height = "150px";
+  phaseBox.style.backgroundColor = "orange";
+  phaseBox.style.opacity = 1;
 });
